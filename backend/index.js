@@ -8,35 +8,29 @@ import companyRoute from "./routes/company.route.js";
 import jobRoute from "./routes/job.route.js";
 import applicationRoute from "./routes/application.route.js";
 
-dotenv.config({});
+dotenv.config();
 
 const app = express();
 
 // middleware
 app.use(express.json());
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-const cors = require('cors');
 
 app.use(cors({
   origin: 'https://job-portal-frontend-eight-beta.vercel.app', // allow only your frontend
-  credentials: true // if you use cookies or auth headers
+  credentials: true
 }));
 
-
-
-const PORT = https://job-portal-final-1.vercel.app/ || 8000;
-
-
-// api's
+// API routes
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/company", companyRoute);
 app.use("/api/v1/job", jobRoute);
 app.use("/api/v1/application", applicationRoute);
 
+const PORT = process.env.PORT || 8000;
 
-
-app.listen(PORT,()=>{
-    connectDB();
-    console.log(`Server running at port ${PORT}`);
-})
+app.listen(PORT, () => {
+  connectDB();
+  console.log(`Server running at port ${PORT}`);
+});
