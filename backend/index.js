@@ -22,7 +22,7 @@ const corsOptions = {
 }
 
 app.use(cors({
-    origin:[""],
+    origin:["https://job-portal-final-1.vercel.app/"],
     methods:["POST","GET"],
     credentials:true
 }
