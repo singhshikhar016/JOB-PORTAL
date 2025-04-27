@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 const corsOptions = {
-    origin:'http://localhost:5173',
+    origin:'https://job-portal-final-1.vercel.app/',
     credentials:true
 }
 
@@ -29,7 +29,7 @@ app.use(cors({
 ));
 
 
-const PORT = process.env.PORT || 8000;
+const PORT = https://job-portal-final-1.vercel.app/ || 8000;
 
 
 // api's
