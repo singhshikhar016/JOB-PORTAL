@@ -16,17 +16,13 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
-const corsOptions = {
-    origin:'https://job-portal-frontend-eight-beta.vercel.app',
-    credentials:true
-}
+const cors = require('cors');
 
 app.use(cors({
-    origin:["https://job-portal-final-1.vercel.app"],
-    methods:["POST","GET"],
-    credentials:true
-}
-));
+  origin: 'https://job-portal-frontend-eight-beta.vercel.app', // allow only your frontend
+  credentials: true // if you use cookies or auth headers
+}));
+
 
 
 const PORT = https://job-portal-final-1.vercel.app/ || 8000;
