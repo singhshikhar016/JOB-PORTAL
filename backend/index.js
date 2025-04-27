@@ -21,7 +21,12 @@ const corsOptions = {
     credentials:true
 }
 
-app.use(cors(corsOptions));
+app.use(cors({
+    origin:[""],
+    methods:["POST","GET"],
+    credentials:true
+}
+));
 
 
 const PORT = process.env.PORT || 8000;
