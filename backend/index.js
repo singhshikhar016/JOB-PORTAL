@@ -11,16 +11,16 @@ import applicationRoute from "./routes/application.route.js";
 dotenv.config();
 
 const app = express();
+app.use(cors({
+  origin: 'https://job-portal-frontend-eight-beta.vercel.app',
+  credentials: true 
+}));
 
 // middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-app.use(cors({
-  origin: 'https://job-portal-frontend-eight-beta.vercel.app/', // replace with your frontend URL
-  credentials: true
-}));
 
 
 // API routes
