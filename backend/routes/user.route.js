@@ -5,10 +5,10 @@ import { singleUpload } from "../middlewares/mutler.js";
  
 const router = express.Router();
 
-router.route("https://job-portal-backend-seven-omega.vercel.app/register").post(singleUpload,register);
-router.route("https://job-portal-backend-seven-omega.vercel.app/login").post(login);
-router.route("https://job-portal-backend-seven-omega.vercel.app/logout").get(logout);
-router.route("https://job-portal-backend-seven-omega.vercel.app/profile/update").post(isAuthenticated,singleUpload,updateProfile);
+router.route("/register").post(singleUpload,register);
+router.route("/login").post(login);
+router.route("/logout").get(logout);
+router.route("/update").post(isAuthenticated,singleUpload,updateProfile);
 
 export default router;
 
