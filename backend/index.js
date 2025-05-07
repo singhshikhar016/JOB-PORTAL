@@ -18,8 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 app.use(cors({
-  origin: 'https://job-portal-frontend-eight-beta.vercel.app', // allow only your frontend
-  credentials: true
+  origin: '*'
 }));
 
 // API routes
