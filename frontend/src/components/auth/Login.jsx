@@ -30,7 +30,7 @@ const Login = () => {
         e.preventDefault();
         try {
             dispatch(setLoading(true));
-            const res = await axios.post(`https://job-portal-backend-seven-omega.vercel.app/login`, input, {
+            const res = await axios.post(`USER_API_END_POINT/login`, input, {
                 headers: {
                     "Content-Type": "application/json"
                 },
