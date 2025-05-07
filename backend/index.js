@@ -12,7 +12,7 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-  origin: 'https://job-portal-backend-seven-omega.vercel.app/',
+  origin: 'https://job-portal-frontend-eight-beta.vercel.app/',
   credentials: true 
 }));
 
