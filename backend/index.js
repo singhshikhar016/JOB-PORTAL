@@ -29,7 +29,7 @@ app.use("https://job-portal-frontend-eight-beta.vercel.app/company", companyRout
 app.use("https://job-portal-frontend-eight-beta.vercel.app/job", jobRoute);
 app.use("https://job-portal-frontend-eight-beta.vercel.app/application", applicationRoute);
 
-const PORT = process.env.PORT || 8000;
+const PORT = https://job-portal-frontend-eight-beta.vercel.app ;
 
 app.listen(PORT, () => {
   connectDB();
